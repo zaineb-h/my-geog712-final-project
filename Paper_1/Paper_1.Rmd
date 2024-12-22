@@ -1,54 +1,37 @@
 ---
-title: Short Paper
+title: "Biomonitoring of smoke exposure in firefighters: A review"
 author:
-  - name: Alice Anonymous
-    email: alice@example.com
-    affiliation: Some Institute of Technology
+  - name: Biban Gill
+    affiliation: Department of Chemistry and Chemical Biology
+  - name: Philip Britz-McKibbin
+    email: britz@mcmaster.ca
+    affiliation: Department of Chemistry and Chemical Biology
     correspondingauthor: true
-    footnote: 1
-  - name: Bob Security
-    email: bob@example.com
-    affiliation: Another University
-  - name: Cat Memes
-    email: cat@example.com
-    affiliation: Another University
-    footnote: 2
-  - name: Derek Zoolander
-    email: derek@example.com
-    affiliation: Some Institute of Technology
-    footnote: 2
 address:
-  - code: Some Institute of Technology
-    organization: Big Wig University
-    addressline: 1 main street
-    city: Gotham
-    state: State
-    postcode: 123456
-    country: United States
-  - code: Another University
-    organization: Department
-    addressline: A street 29
-    postcode: 2054 NX
-    city: Manchester,
-    country: The Netherlands
-footnote:
-  - code: 1
-    text: "This is the first author footnote."
-  - code: 2
-    text: "Another author footnote."
+  - code: Department of Chemistry and Chemical Biology
+    organization: McMaster University
+    addressline: 1280 Main Street West
+    city: Hamilton
+    state: Ontario
+    postcode: L8S 4M1
+    country: Canada
 abstract: |
-  This is the abstract.
-
-  It consists of two paragraphs.
+  Biomonitoring of exposures to toxic contaminants from environmental smoke is important due to their deleterious impacts on human health, including cardiorespiratory diseases and cancer. This is particularly relevant for firefighters who are prone to extensive dermal exposure to smoke despite using personalized protective equipment. Reliable methods are needed for the analysis of sensitive yet specific biomarkers reflecting occupational smoke exposure, given various background sources. This review focuses on biomarkers used for measuring acute smoke exposure after fire suppression activities, such as biotransformed hydroxylated polycyclic aromatic hydrocarbons and their isomers in urine. Major challenges include developing optimal sampling approaches to capture transient smoke exposures, evaluating genetic and lifestyle contributions that modify risk assessment, as well as integrating clinically relevant biomarkers associated with oxidative stress, inflammation, and/or genotoxicity. Herein, we focus on robust biomarkers of recent smoke exposures and future perspectives aimed at implementing effective mitigation strategies for workplace protection of firefighters.
 keywords: 
-  - keyword1
-  - keyword2
-journal: "An awesome journal"
+  - Smoke exposures
+  - Biomarkers
+  - Biomonitoring
+  - Firefighters
+  - Polycyclic aromatic hydrocarbons
+  - Chromatography
+  - Mass spectrometry
+journal: "Current Opinion in Environmental Science & Health"
 date: "`r Sys.Date()`"
 linenumbers: false
 numbersections: true
 bibliography: mybibfile.bib
-biblio-style: elsarticle-harv # author year style for natbib - use 'elsarticle-num' or 'elsarticle-num-names' for numbered scheme
+biblio-style: elsarticle-harv
+# author year style for natbib - use 'elsarticle-num' or 'elsarticle-num-names' for numbered scheme
 classoption: preprint, 3p, authoryear # remove authoryear is not using `elsarticle-harv`
 # Use a CSL with `citation_package = "default"`
 # csl: https://www.zotero.org/styles/elsevier-harvard
@@ -58,67 +41,66 @@ output:
     citation_package: natbib
 ---
 
-Please make sure that your manuscript follows the guidelines in the 
-Guide for Authors of the relevant journal. It is not necessary to 
-typeset your manuscript in exactly the same way as an article, 
-unless you are submitting to a camera-ready copy (CRC) journal.
+# Introduction
 
-For detailed instructions regarding the elsevier article class, see   <https://www.elsevier.com/authors/policies-and-guidelines/latex-instructions>
+Over half the global population is exposed to household smoke from the burning of wood, coal, charcoal, or biomass for daily cooking and heating needs [@1]. There is also an alarming exposure to contaminants in particulate matter prevalent in rapidly expanding urban settings of many developing countries. Together, environmental smoke exposure from tobacco use and ambient air pollution is the fourth leading risk factor for disease burden worldwide [@2]. However, firefighters are at even greater risk for chronic exposure to smoke due to their occupation, including a plethora of carcinogenic chemicals from the combustion of wood and plastics [@3, @4, @5]. Occupational exposure to smoke increases the incidence of cardiorespiratory illnesses (e.g. chronic obstructive pulmonary disease, cardiac infarction) and is associated with a higher risk for cancer in firefighters [@6, @7]. As a result, most states and provinces across North America have introduced presumptive cancer legislations providing firefighters with workers compensation for job-related illnesses [@8].
 
-# Bibliography styles
+Biomonitoring of smoke exposure can be used as a tool to investigate work protection factors to mitigate chronic disease risk and improve long-term health outcomes for firefighters. Despite the use of personal protective equipment during fire events, such as self-contained breathing apparatuses to reduce inhalation exposure, higher cancer rates are still prevalent among firefighters as compared with the general public [@8]. Consequently, accurate assessment of the chemical constituents in smoke is required to delineate multiple exposure pathways that impact firefighters during training exercises and active deployment, including initial fire suppression and subsequent overhaul activities [@9, @10, @11]. This includes hygienic practices and personal protective equipment designed to reduce dermal absorption of intoxicants because it remains the major route of exposure for firefighters when inhalation is minimized [@12].
 
-Here are two sample references: @Feynman1963118 [@Dirac1953888].
+Toxic substances identified in fire smoke include polycyclic aromatic hydrocarbons (PAHs), volatile organic compounds (e.g. methoxyphenols), and asphyxiate gases (e.g. carbon monoxide), in addition to various other combustion-related contaminants (e.g. dioxins) and inorganic materials (e.g. asbestos). As such, a growing number of smoke exposure studies involving both structural/urban and wildland firefighters have been reported [@6, @13, @14, @15, @16, @17] since the International Agency for Research on Cancer classified occupational exposure as a firefighter as possibly carcinogenic to humans (Group 2B). Herein, we review the literature since 2010 to examine best practices for assessing smoke exposure in firefighters that is also relevant to other occupations (e.g. asphalt/coke oven workers), including biomarkers applicable to risk assessment using validated instrumental protocols for their quantitative determination.
 
-By default, natbib will be used with the `authoryear` style, set in `classoption` variable in YAML and with `elsearticle-harv.bst` which is among provided style by `elsarticle` documentclass. Other available style are `elsarticle-num.bst` and `elsarticle-num-names.bst` — the first one can be used for the numbered scheme, second one for numbered with new options of natbib.sty. 
+# Biomarkers of smoke exposure
 
-You can sets extra options with `natbiboptions` variable in YAML header. Example 
-```yaml
-natbiboptions: longnamesfirst,angle,semicolon
-```
+For a biomarker to be considered an effective indicator of smoke exposure, it must demonstrate adequate sensitivity, specificity, and robustness for its routine analysis given numerous background sources from diet and lifestyle, such as intake of charred/smoked meats, and tobacco smoking that may not be accurately captured by self-reported questionnaires [@18]. To date, several compounds identified in human biofluids have been proposed as putative biomarkers of wood smoke exposure in firefighters including carboxyhemoglobin, PAH metabolites, PAH–DNA adducts, methoxyphenols (MPs), and levoglucosan [@19].
 
-There are various more specific bibliography styles available at
-<https://support.stmdocs.in/wiki/index.php?title=Model-wise_bibliographic_style_files>. 
-To use one of these, add it in the header using, for example, `biblio-style: model1-num-names`.
+Carbon monoxide is a major contributor to acute toxicity from smoke inhalation owing to the formation of elevated levels of carboxyhemoglobin in blood that impairs oxygen transport to vital organs [@20]. However, an association with smoke exposures and circulating carboxyhemoglobin was only reported to be significant in wildland firefighters when carbon monoxide levels exceeded 5 ppm [@19]. Carboxyhemoglobin thus demonstrates poor sensitivity when evaluating subacute intoxification, and it does not allow for assessment of exposure to carcinogens in firefighters [@21]. In addition, sampling of blood is invasive, while alveolar breath for carbon monoxide assessment is impractical to collect from firefighters during emergency fire events [@22] unlike wearable devices that enable real-time monitoring of heart rate, body temperature, and/or oxygen saturation [@23].
 
-## Using CSL 
+PAHs are largely generated as a result of incomplete combustion of organic material via a hydrogen abstraction acetylene addition mechanism [@24]. With more than 100 different species characterized in complex smoke mixtures, 16 PAHs have been classified as possible carcinogens and priority pollutants [@25]. Exposure to PAHs is likely the primary cause for the high cancer rates in firefighters because of the bioactivation of these compounds into reactive intermediates that form covalent adducts to DNA [@26]. PAHs can be measured directly on skin (i.e. dermal deposition via skin wipes), as well as in blood and urine; however, their short half-lives in circulation make it difficult to analyze PAHs after a transient exposure event. In contrast, analysis of biotransformed hydroxylated PAH metabolites (OH-PAHs) in urine is far more practical for assessment of recent smoke exposures within about 24 h [@19, @27]. OH-PAHs are metabolized in the liver and excreted in urine predominately as their glucuronide conjugates. However, PAHs having more than four carbon rings, including the more toxic benzo [a]pyrene (BaP), are eliminated primarily in the feces [@28], and thus, their urinary OH-PAH concentrations are often below detection thresholds [@12] even after offline sample preconcentration of large urine volumes (>5 mL) by solid-phase extraction.
 
-If `citation_package` is set to `default` in `elsevier_article()`, then pandoc is used for citations instead of `natbib`. In this case, the `csl` option is used to format the references. Alternative `csl` files are available from <https://www.zotero.org/styles?q=elsevier>. These can be downloaded
-and stored locally, or the url can be used as in the example header.
+Several studies have evaluated smoke exposure based on reporting the sum total or absolute concentrations of specific OH-PAH metabolites in urine after normalization to creatinine to correct for differences in hydration status when relying on single-spot urine specimens (Table 1). Frequently measured urinary OH-PAH metabolites include 1-hydroxypyrene (OH-Pyr), as well as various isomers of hydroxynapthalene (OH-Nap), hydroxyphenathrene (OH-Phe), and hydroxyfluorene (OH-Flu) after their enzymatic deconjugation. For instance, Keir et al. [@29] reported a significant elevation in mean urinary OH-PAH concentrations ranging from 2.9- to 5.3-fold, 18 h after on-shift firefighting events as compared with matching pre-exposure baseline, office workers at fire stations, and nonsmoking healthy controls as shown in Figure 1. Furthermore, there was a 4.3-fold average increase in urinary mutagenicity reported in postfire suppression event urine samples collected from active duty firefighters; however, no changes in urinary indicators of lung injury and inflammation were reported.
 
-# Equations
-
-Here is an equation:
-$$ 
-  f_{X}(x) = \left(\frac{\alpha}{\beta}\right)
-  \left(\frac{x}{\beta}\right)^{\alpha-1}
-  e^{-\left(\frac{x}{\beta}\right)^{\alpha}}; 
-  \alpha,\beta,x > 0 .
-$$
-
-Here is another:
-\begin{align}
-  a^2+b^2=c^2.
-\end{align}
-
-Inline equations: $\sum_{i = 2}^\infty\{\alpha_i^\beta\}$
-
-# Figures and tables
-
-Figure \ref{fig2} is generated using an R chunk.
-
-```{r fig2, fig.width = 5, fig.height = 5, fig.align='center', out.width="50%", fig.cap = "\\label{fig2}A meaningless scatterplot.", echo = FALSE}
-plot(runif(25), runif(25))
-```
-
-# Tables coming from R
-
-Tables can also be generated using R chunks, as shown in Table \ref{tab1} for example.
-
-```{r tab1, echo = TRUE}
-knitr::kable(head(mtcars)[,1:4], 
-    caption = "\\label{tab1}Caption centered above table"
+```{r tab1, echo = FALSE}
+library(knitr)
+Table1<-read.csv("./Tables/table1.csv")
+knitr::kable(
+  Table1,
+  col.names = c('Urinary OH-PAHs', 'Study cohort', 'Method/sample workup', 'Major findings', 'Reference')
 )
 ```
 
-# References {-}
 
+
+![An increase in OH-PAH concentrations (as indicated by the single asterisks, p < 0.0001) in urine collected in firefighters 18 h after exposure as compared with their baseline levels when using GC–MS/MS as reported by Keir et al. [@29]. Box-whisker plots for urinary (a) 1-hydroxypyrene, as well as total isomers for (b) hydroxyphenanthrene, (c) hydroxyfluorene, and (d) hydroxynapthalene are shown for firefighters both before and after fire events as compared with a cohort of nonsmoking Canadian males, and nondeployed office workers at the fire station as controls [29]. The box limits represent the interquartile range (i.e. 25th to 75th percentile), the line and diamond are the median and mean concentration, respectively; the whiskers extent to the 5th and 95th percentiles, and circles are outliers. ANOVA, analysis of variance; FF, firefighter; GC, gas chromatography; MS/MS, tandem mass spectrometry; OH-PAH, hydroxylated polycyclic aromatic hydrocarbons. Adapted from the study by Keir et al. (2017) with permission from ACS publications.](./Figures/Figure1.jpg)
+
+
+Fernando et al. [@3] analyzed a suite of OH-PAHs and other combustion by-products of wood smoke that were elevated in 24-h postexposure urine samples collected in firefighters after training exercises in burn houses. Smoke exposures were dependent on the specific operational role of firefighters, as well as other variables in the five different sites tested, such as burn house dimensions, fire intensity, and local hygienic practices involving cleaning of their bunker gear and self-contained breathing apparatus. Similarly, Oliviera et al. [@14] measured elevated concentrations of six urinary OH-PAHs in wildland firefighters at 1.7- to 35-fold higher than in nonexposed participants, highlighting a large variability in smoke exposures. Although there are numerous PAH metabolites excreted in the urine, OH-Pyr is most widely used for biomonitoring of smoke exposure. Urinary OH-Pyr is widely used for biomonitoring of recent smoke exposures due to the natural abundance of pyrene in most smoke mixtures, which is also excreted in urine as a single isomer with a half-life ranging from 6 to 32 h depending on the exact exposure pathway [@27, @30]. Ciarrocca et al. [@31] performed a meta-analysis study to confirm the validity of urinary OH-Pyr as a biomarker of occupational exposure to PAHs provided that other environmental, genetic, and lifestyle factors are considered. Recently, Wingfors et al. [@12] reported that among 8 urinary PAH metabolites analyzed in their study, OH-Pyr was the most useful indicator of transient smoke exposure with elevated urinary concentrations measured at 6 and 20 h after exposure, which also had the strongest correlation to particle-bound PAH dermal exposure unlike other urinary OH-PAH metabolites as shown in Figure 2. However, there were some exceptions to this linear model likely reflecting other routes of exposure among certain firefighters participating in this study [@12]. Indeed, delays to urine collection from wildland firefighters contribute to a significant underestimate of their true exposures in the field [@30, @32] that is well below the recommended occupational exposure limit for urinary OH-Pyr of 1.0 umol/mol creatinine [@33] or 0.5 umol/mol creatinine as recommended by the American Conference of Government Industrial Hygienists.
+
+
+![A positive correlation between urinary OH-Pyr collected at 6 h after exposure and pyrene deposited on the neck of volunteer firefighters as reported by Wingfors et al. [@12]. This study indicated a predominant dermal exposure route for nonsmoking firefighters who were equipped with a self-contained breathing apparatus. However, three participants deviated from this linear model, which was likely due to underlying differences in their metabolism and/or other exposure routes. OH-Pyr, 1-hydroxypyrene. Reprinted from the study by Wingfors et al. (2018) with permission from Oxford Academic.](./Figures/Figure2.jpg)
+
+
+The most widely used instrumental methods for PAH and OH-PAH analysis include gas chromatography (GC) with tandem mass spectrometry (MS/MS) and increasingly high resolution MS (HRMS) that is optimal for nontargeted screening of chemical exposures in the environment [@34]. In addition, liquid chromatography (LC) coupled to either fluorescence detection (FLD) and MS/MS allows for direct analysis of OH-PAHs and their intact glucuronides without complicated and time-consuming sample workup procedures, such as enzymatic hydrolysis and chemical derivatization. Nevertheless, extensive sample cleanup is still needed to reduce background interferences while lowering detection limits when using immunoaffinity, liquid extraction or solid-phase extraction protocols. Table 1 summarizes recent smoke exposure studies involving the analysis of urinary OH-PAHs from firefighters that also outline different analytical methods, study designs, and major outcomes. Recently, Gill et al. [@30] performed an interlaboratory method comparison between LC-MS/MS and GC-HRMS for urinary OH-Pyr determination from firefighters deployed in the 2016 Fort McMurray wildfire. The study revealed a modest bias of 39% when comparing both methods, which was mainly due to incomplete deconjugation of OH-Pyr in the LC-MS/MS protocol based on enzymatic reaction conditions recommended by the reagent supplier [@30]. Consequently, standardized operating protocols are critical for reliable urinary OH-Pyr determination that is also dependent on the specific enzyme source and its glucuronidase and/or sulfatase activity that can vary between batches. In addition, enzyme impurities may contribute to unanticipated substrate degradation and oxidation artifacts resulting in method bias [@35].
+
+PAH–DNA adducts have also been used as more biologically relevant indicators of intoxification and PAH-initiated carcinogenesis from chronic smoke exposures in firefighters. They also show promise as dose-response measures that better reflect the impact of exposure, absorption, distribution, and metabolism of harmful chemical constituents from smoke. For example, bioactivation of PAHs by specific cytochrome P450 isoforms result in the formation of DNA adducts to adenine and guanine bases via PAH diol epoxides within cells/tissue, such as BaP-DNA adducts in lymphocytes [@19]. Pratt et al. [@36] used immunohistochemistry to localize PAH–DNA adducts from human tissue biopsies for semiquantitative assessment of the impact of PAH exposures. However, reliance on tissue biopsies is a limiting factor for this approach, given the need for invasive sample collection, which is impractical for routine biomonitoring of firefighters after emergency fire suppression events. As a result, leukocytes have been used as more accessible circulating white blood cells from whole blood for DNA extraction with BPDE–DNA adducts analyzed by commercial immunoassay kits. However, there were no significant differences in PAH–DNA adducts formation in leukocytes measured between before and after shift samples in a study involving volunteer firefighters [@37], thus making this a less sensitive biomarker for evaluating transient smoke exposures. Alternatively, biomarkers of oxidative DNA damage are more readily measured in urine by LC-MS/MS (e.g. 8-hydroxydeoxyguanosine), which can be correlated to biotransformed PAH carcinogens, such as the glucuronide and sulfate conjugates of 3-OH-BaP [@38].
+
+MPs in wood smoke are formed as a result of lignin combustion, which makes up 18–35% of wood by mass. Studies have suggested their use as potential biomarkers of smoke exposure as they are readily detectable in urine [@19]. Fernando et al. [@3] reported that MPs are on average 5–10 times higher in concentration than the most abundant PAHs in smoke, such as naphthalene and phenanthrene. Several MP analogues were significantly elevated in firefighters in postexposure urine samples similar to trends measured for OH-PAHs; however, little is known about their toxicity in humans although animal studies indicate their potential for impaired lung function. However, some MPs (e.g. vanillin, eugenol) are not reliable smoke biomarkers, given their ubiquitous use in various foods and flavorants. In contrast, other MPs (e.g. methylsyringol, propylsyringol) are more specific indicators of recent wood smoke exposure with an optimal detection window in urine within 2–6 h [@19] similar to 2-OH-Nap [@39]. Importantly, ‘whole-body’ dermal exposure was evident in firefighters after training exercises in burn houses when measuring the total amount of MPs and PAHs from skin wipes sampled at five different body locations after exposure as shown in Figure 3. This work highlights that current personal protective equipment for firefighters are not designed to prevent skin absorption of chemical constituents from smoke. Greater exposures have also been reported among firefighters not wearing their flash hood equipment during on-shift fire suppression activities [@29], and poor skin hygiene practices exacerbated by prolonged emergency deployment [@32].
+
+
+![Whole-body dermal exposure demonstrated by the collection of skin wipes from five different sites on firefighters (n = 28) as reported by Fernando et al. [@3] after standardized training exercises in burn houses based on total concentrations of MPs (15 compounds) and PAHs (16 compounds). Firefighters from five different fire stations in the province of Ontario were sampled (AFD, BFD, CFD, DFD, and EFD), with total concentrations on different skin sites being nearly equivalent, with the exception of fingers that had far more variable yet higher dermal deposition from smoke exposure (p < 0.05). These data indicated a likely uniform penetration and deposition of organic contaminants on the skin (i.e, whole-body exposure) that was exacerbated by sweating from heat and physical exertion following training exercises in burn houses. MPs, methoxyphenols; PAHs, polycyclic aromatic hydrocarbons. Reprinted from the study by Fernando et al. (2016) with permission from ACS publications.](./Figures/Figure3.jpg)
+
+
+Levoglucosan is formed as a result of the pyrolysis of cellulose, making it one of the most abundant particle-phase organic compounds in wood smoke [@40]. This abundant by-product of wood smoke can be readily measured in urine without extensive biotransformation similar to MPs [@19]. However, there exists a large dietary contribution of levoglucosan contributing to its high biological variation [@41]. For example, a study by Bergauff et al. [@42] examining urinary levoglucosan as a biomarker of wood smoke showed no consistent response to smoke exposure. A subsequent dietary intervention based on caramel intake revealed an increase in urinary levoglucoson concentrations within 2 h that only returned to baseline within 24 h, emphasizing that recent diet history is a critical factor when relying on it as a biomarker of wood smoke exposure. Similarly, another study reported that there was preshift and postshift changes in urinary levoglucosan concentrations; however, the direction of change was not consistent between firefighters [@43].
+
+# Future Perspectives
+
+Occupational smoke exposures have been associated with deleterious physiological outcomes in firefighters and their risk for developing various chronic diseases, including elevated oxidative stress/inflammation, decreased lung function, and greater arterial stiffness [@41, @43]. However, diet remains a major source of variation that limits the utility of urinary biomarkers as specific indicators of transient smoke exposures, notably levoglucosan and certain MPs. As such, stringent dietary control is needed in future study designs, such as semiquantitative food frequency questionnaires, self-reported diet records, and/or measurement of validated biomarkers of habitual diet [@44]. Similarly, studies investigating PAH-derived smoke exposures in firefighters have not addressed factors impacting their biotransformation including age, diet, as well as concurrent medication use. These variables should be included in questionnaires besides tobacco smoking history and/or alcohol consumption patterns as they impact the metabolism of specific cytochrome P450 isoforms in the liver and the rates of urinary excretion of OH-PAHs [@45] whose concentrations are not only dependent on recent smoke exposures and hydration status. Another important consideration is the combustion material of the fire as it impacts the chemical composition of smoke exposure in structural or wildland firefighters. For example, wood smoke urinary biomarkers, including levoglucosan and MPs, may be suitable for assessing chemical exposure in wildland firefighters [@46] but less relevant for structural firefighters in an urban setting who are exposed to a plethora of organic contaminants in smoke from the burning of buildings, furniture, and electronics, such as flame retardants [@47]. In this context, given the large variability of fire events, PAHs may serve as optimal biomarkers of acute smoke exposure in firefighters applicable to different settings, where a subset is also known carcinogens in humans.
+
+For these reasons, low-molecular-weight urinary OH-PAHs, notably OH-Pyr, are the most widely measured class of biomarker of smoke exposure in firefighters. To date, most studies have investigated small cohorts of firefighters with large between-subject variations in exposures highlighting the importance of dermal exposure when using personalized protective equipment to prevent burns and smoke inhalation, but not skin absorption of contaminants from smoke. This process is likely exacerbated by physical exertion and heat stress with extensive sweating of deployed firefighters during fire suppression events that enhance the dermal uptake and dispersion of contaminants over their entire body [@12]. Furthermore, inadequate cleaning or improper use of personalized protective equipment, as well as the lack of standardized hygienic policies implemented at different fire stations, also contribute to variable smoke exposures [@3]. Sensitive yet higher throughput methods that enable comprehensive analysis of higher molecular weight OH-PAHs directly in urine are still needed to avoid technical problems associated with incomplete enzyme hydrolysis or artifact formation during sample processing [30]. In addition, recently identified PAHs having toxic equivalency factors greater than BaP (e.g., 3-methylcholanthrene) may provide more reliable assessment of cancer risk in firefighters [@48]. Anchoring transient PAH exposures in firefighters to physiological measures and clinical outcomes is still needed in large-scale prospective studies. Moreover, there remains a lack of studies evaluating the susceptibility to PAH-associated risk in firefighters owing to genetic differences in CYP 450 enzyme activity and DNA repair capacity, which are further modulated by habitual diet, nutritional status, and drug exposures. Furthermore, new approaches for real-time assessment of smoke exposures during emergency operations are needed because of challenges related to uncontrolled delays in urine collection, such as nonstimulated sweat collection using wearable devices on the forearm [@49]. Besides wood smoke, there is growing concern of inadvertent dermal uptake of other toxic chemicals by firefighters from the use of personal protective equipment, such as high amounts of plasticizers (e.g. di-[2-hexyethyl]phthalate) leached from the inner lining of a bunker gear that greatly exceed PAH exposures [@50]. New advances in comprehensive analysis of contaminants (e.g. exposomics) are also needed, given that PAHs represent only a small fraction of potentially carcinogenic compounds in smoke. In summary, longitudinal study designs and in situ sampling devices are urgently required to develop mitigation and decontamination strategies that better protect firefighters from dermal smoke exposures.
+
+# Conflicts of interest statement
+
+Nothing declared.
+
+# Acknowledgements
+
+PBM acknowledges funding from the Natural Sciences and Engineering Research Council of Canada, and Genome Canada.
